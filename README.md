@@ -49,7 +49,7 @@ Bu projede kullanılan teknolojiler ve araçlar:
 ### ER Diyagram
 Projede kullanılan tablolar ve ilişkiler, aşağıdaki ER diyagramında gösterilmiştir.
 
-![ER Diyagram](er-diagram-placeholder.png)![image](https://github.com/user-attachments/assets/05cd446f-d766-45c0-870e-609669a8ba14)
+![image](https://github.com/user-attachments/assets/a730c6b1-2c3c-4f35-a351-9d4780cf1c5c)
 
 
 
