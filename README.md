@@ -23,26 +23,6 @@ Bu proje, Kastamonu Üniversitesi Bilgisayar Mühendisliği bölümü Veri Taban
 
 ---
 
-## Projenin Amacı
-Bu projede amaç, bir üniversite öğrencisi için kullanıcı dostu bir panel geliştirmektir. Proje, öğrencilerin:
-- Kendi bilgilerini görüntülemesini,
-- Ders seçimi yapmasını,
-- Notlarını takip etmesini,
-- Ayarlarını değiştirmesini ve güncellemesini,
-- İletişim için öğretmen bilgilerine erişmesini sağlamayı hedefler.
-
----
-
-## Teknolojiler
-Bu projede kullanılan teknolojiler ve araçlar:
-- **Programlama Dili:** C#
-- **Veritabanı:** Microsoft SQL Server
-- **Araçlar:** Visual Studio IDE
-- **Veritabanı İlişkileri:** INNER JOIN, LEFT JOIN, TRIGGER, STORED PROCEDURE (Saklı Yordam)
-- **UI:** Windows Forms
-
----
-
 ## Veritabanı Yapısı
 
 ### ER Diyagram
