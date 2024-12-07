@@ -1,36 +1,79 @@
 # Üniversite Öğrenci Paneli Projesi
 
-Bu proje, **Kastamonu Üniversitesi Bilgisayar Mühendisliği** bölümü "Veri Tabanı Yönetim Sistemleri" dersi kapsamında geliştirilmiştir. Projede bir üniversite öğrenci paneli oluşturulmuş, öğrenciler için giriş, ders seçimi, not görüntüleme ve ayarlar gibi işlevler sunulmuştur.
+**Proje Hakkında**  
+Bu proje, Kastamonu Üniversitesi Bilgisayar Mühendisliği bölümü Veri Tabanı Yönetim Sistemleri dersi kapsamında geliştirilmiştir. Proje, üniversite öğrencilerinin ders seçimi, not görüntüleme, ayar yapma gibi ihtiyaçlarını karşılayan bir panel uygulamasıdır.
 
 ## İçindekiler
-- [ER Diyagram](#er-diyagram)
-- [Tablolar ve İlişkiler](#tablolar-ve-ilişkiler)
-- [Kod Açıklamaları](#kod-açıklamaları)
-  - [Öğrenci Girişi Formu](#öğrenci-girişi-formu)
-  - [Şifre Sıfırlama](#şifre-sıfırlama)
-  - [Öğrenci Sayfası](#öğrenci-sayfası)
-  - [Ders Seçimi ve Notlar](#ders-seçimi-ve-notlar)
-  - [Ayarlar Sayfası](#ayarlar-sayfası)
-  - [Öğretmen İletişim](#öğretmen-iletişim)
+- [Projenin Amacı](#projenin-amacı)
+- [Teknolojiler](#teknolojiler)
+- [Veritabanı Yapısı](#veritabanı-yapısı)
+  - [ER Diyagram](#er-diyagram)
+  - [Tablo Açıklamaları](#tablo-açıklamaları)
+- [Uygulama Özellikleri](#uygulama-özellikleri)
+  - [Giriş Sistemi](#giriş-sistemi)
+  - [Ders Seçimi](#ders-seçimi)
+  - [Not Görüntüleme](#not-görüntüleme)
+  - [Ayarlar Menüsü](#ayarlar-menüsü)
+  - [Öğretmen İletişim Modülü](#öğretmen-iletişim-modülü)
+- [Kod Detayları](#kod-detayları)
+  - [SQL Sorguları](#sql-sorguları)
+  - [Trigger ve Saklı Yordam Kullanımı](#trigger-ve-saklı-yordam-kullanımı)
+- [Kurulum](#kurulum)
+- [Ekran Görüntüleri](#ekran-görüntüleri)
+- [Geliştirici Bilgileri](#geliştirici-bilgileri)
 
-## ER Diyagram
-Projenin ER diyagramı, tablolar arasındaki ilişkileri ve anahtar (primary key) - yabancı anahtar (foreign key) bağlantılarını göstermektedir.
+---
 
-![ER Diyagram](er-diagram-placeholder.png)
+## Projenin Amacı
+Bu projede amaç, bir üniversite öğrencisi için kullanıcı dostu bir panel geliştirmektir. Proje, öğrencilerin:
+- Kendi bilgilerini görüntülemesini,
+- Ders seçimi yapmasını,
+- Notlarını takip etmesini,
+- Ayarlarını değiştirmesini ve güncellemesini,
+- İletişim için öğretmen bilgilerine erişmesini sağlamayı hedefler.
 
-## Tablolar ve İlişkiler
-Projede kullanılan başlıca tablolar ve özellikleri aşağıda listelenmiştir:
-- **TblDers**: Ders bilgilerini içerir (DersID otomatik artar, başlangıç 100).
-- **TblBolum**: Bölüm bilgilerini içerir (BolumID otomatik artar, başlangıç 300).
-- **TblOgrenci**: Öğrenci bilgilerini içerir. (OgrNo otomatik artar, başlangıç 1000).
-- **TblNot**: Öğrencilerin notlarını içerir.
-- **TblOgretmen**: Öğretmen bilgilerini içerir.
+---
 
-## Kod Açıklamaları
+## Teknolojiler
+Bu projede kullanılan teknolojiler ve araçlar:
+- **Programlama Dili:** C#
+- **Veritabanı:** Microsoft SQL Server
+- **Araçlar:** Visual Studio IDE
+- **Veritabanı İlişkileri:** INNER JOIN, LEFT JOIN, TRIGGER, STORED PROCEDURE (Saklı Yordam)
+- **UI:** Windows Forms
 
-### Öğrenci Girişi Formu
-Bu modül, öğrencilerin giriş yapabilmesini sağlar. SQL sorguları ile öğrenci bilgileri doğrulanır. Hatalı girişler için uyarı mesajı gösterilir.
+---
 
-**SQL Sorgusu Örneği:**
+## Veritabanı Yapısı
+
+### ER Diyagram
+Projede kullanılan tablolar ve ilişkiler, aşağıdaki ER diyagramında gösterilmiştir.
+
+![ER Diyagram](er-diagram-placeholder.png)![image](https://github.com/user-attachments/assets/05cd446f-d766-45c0-870e-609669a8ba14)
+
+
+
+### Tablo Açıklamaları
+- **TblDers**: Ders bilgileri. `DersID` otomatik artar (100'den başlayarak 1'er 1'er artar).
+- **TblBolum**: Bölüm bilgileri. `BolumID` otomatik artar (300'den başlayarak 1'er 1'er artar).
+- **TblOgrenci**: Öğrenci bilgileri. `OgrNo` otomatik artar (1000'den başlayarak).
+- **TblNot**: Öğrencilerin ders ve not bilgileri.
+- **TblOgretmen**: Öğretmen bilgileri.
+
+**İlişkiler:**
+- `TblOgrenci` → `Tblil` (Foreign Key: `ilID`)
+- `TblNot` → `TblDers` (Foreign Key: `DersID`)
+- `TblDers` → `TblOgretmen` (Foreign Key: `OgretmenID`)
+
+---
+
+## Uygulama Özellikleri
+
+### Giriş Sistemi
+Kullanıcılar, öğrenci numarası ve şifreleri ile sisteme giriş yapabilir. Giriş işlemi sırasında:
+- Kullanıcının veritabanında var olup olmadığı kontrol edilir.
+- Başarılı girişlerde kullanıcı bilgileri bir sonraki sayfaya aktarılır.
+
+**SQL Örneği:**
 ```csharp
 cmd.CommandText = "SELECT * FROM TblOgrenci WHERE OgrNo='" + _ogrencino + "' AND Sifre LIKE'" + _sifre + "'";
