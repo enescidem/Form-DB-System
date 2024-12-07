@@ -1,0 +1,17 @@
+C:\Users\enesc\Desktop\VT_FormProje\VT_FormProje\VT_FormProje\bin\Debug\VT_FormProje.exe
+C:\Users\enesc\Desktop\VT_FormProje\VT_FormProje\VT_FormProje\bin\Debug\VT_FormProje.exe.config
+C:\Users\enesc\Desktop\VT_FormProje\VT_FormProje\VT_FormProje\obj\Debug\VT_FormProje.csproj.AssemblyReference.cache
+C:\Users\enesc\Desktop\VT_FormProje\VT_FormProje\VT_FormProje\obj\Debug\VT_FormProje.csproj.SuggestedBindingRedirects.cache
+C:\Users\enesc\Desktop\VT_FormProje\VT_FormProje\VT_FormProje\obj\Debug\VT_FormProje.AyarlarFormu.resources
+C:\Users\enesc\Desktop\VT_FormProje\VT_FormProje\VT_FormProje\obj\Debug\VT_FormProje.DersSecimiFormu.resources
+C:\Users\enesc\Desktop\VT_FormProje\VT_FormProje\VT_FormProje\obj\Debug\VT_FormProje.NotlarFormu.resources
+C:\Users\enesc\Desktop\VT_FormProje\VT_FormProje\VT_FormProje\obj\Debug\VT_FormProje.OgrenciGirisi.resources
+C:\Users\enesc\Desktop\VT_FormProje\VT_FormProje\VT_FormProje\obj\Debug\VT_FormProje.OgrenciSayfasi.resources
+C:\Users\enesc\Desktop\VT_FormProje\VT_FormProje\VT_FormProje\obj\Debug\VT_FormProje.OgretmenIletisimFormu.resources
+C:\Users\enesc\Desktop\VT_FormProje\VT_FormProje\VT_FormProje\obj\Debug\VT_FormProje.Properties.Resources.resources
+C:\Users\enesc\Desktop\VT_FormProje\VT_FormProje\VT_FormProje\obj\Debug\VT_FormProje.SifremiUnuttumFormu.resources
+C:\Users\enesc\Desktop\VT_FormProje\VT_FormProje\VT_FormProje\obj\Debug\VT_FormProje.csproj.GenerateResource.cache
+C:\Users\enesc\Desktop\VT_FormProje\VT_FormProje\VT_FormProje\obj\Debug\VT_FormProje.csproj.CoreCompileInputs.cache
+C:\Users\enesc\Desktop\VT_FormProje\VT_FormProje\VT_FormProje\obj\Debug\VT_FormProje.exe
+C:\Users\enesc\Desktop\VT_FormProje\VT_FormProje\VT_FormProje\obj\Debug\VT_FormProje.pdb
+C:\Users\enesc\Desktop\VT_FormProje\VT_FormProje\VT_FormProje\bin\Debug\VT_FormProje.pdb
