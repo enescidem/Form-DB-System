@@ -4,6 +4,8 @@
 **Proje Hakkında**  
 Bu proje, Kastamonu Üniversitesi Bilgisayar Mühendisliği bölümü Veri Tabanı Yönetim Sistemleri dersi kapsamında geliştirilmiştir. Proje, üniversite öğrencilerinin ders seçimi, not görüntüleme, ayar yapma gibi ihtiyaçlarını karşılayan bir panel uygulamasıdır.
 
+Microsoft SQL Server'da temel SQL sorguları ile INNER JOIN, LEFT JOIN, Saklı Prosedürler (Stored Procedures) ve Tetikleyiciler (Triggers) gibi ileri teknikleri kullanan bir öğrenci yönetim sistemi.
+
 ## İçindekiler
 
 - [Projenin Amacı](#projenin-amacı)
