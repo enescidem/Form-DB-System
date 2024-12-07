@@ -1,95 +1,5 @@
 # Üniversite Öğrenci Paneli Projesi
 
-**Proje Hakkında**  
-Bu proje, Kastamonu Üniversitesi Bilgisayar Mühendisliği bölümü Veri Tabanı Yönetim Sistemleri dersi kapsamında geliştirilmiştir. Proje, üniversite öğrencilerinin ders seçimi, not görüntüleme, ayar yapma gibi ihtiyaçlarını karşılayan bir panel uygulamasıdır.
-
-## İçindekiler
-
-- [Veritabanı Yapısı](#veritabanı-yapısı)
-  - [ER Diyagram](#er-diyagram)
-  - [Tablo Açıklamaları](#tablo-açıklamaları)
-- [Uygulama Özellikleri](#uygulama-özellikleri)
-  - [Giriş Sistemi](#giriş-sistemi)
-  - [Ders Seçimi](#ders-seçimi)
-  - [Not Görüntüleme](#not-görüntüleme)
-  - [Ayarlar Menüsü](#ayarlar-menüsü)
-  - [Öğretmen İletişim Modülü](#öğretmen-iletişim-modülü)
-- [Kod Detayları](#kod-detayları)
-  - [SQL Sorguları](#sql-sorguları)
-  - [Trigger ve Saklı Yordam Kullanımı](#trigger-ve-saklı-yordam-kullanımı)
-- [Kurulum](#kurulum)
-- [Ekran Görüntüleri](#ekran-görüntüleri)
-- [Geliştirici Bilgileri](#geliştirici-bilgileri)
-
----
-
-## Veritabanı Yapısı
-
-### ER Diyagram
-Projede kullanılan tablolar ve ilişkiler, aşağıdaki ER diyagramında gösterilmiştir.
-
-![image](https://github.com/user-attachments/assets/a730c6b1-2c3c-4f35-a351-9d4780cf1c5c)
-
-
-
-### Tablo Açıklamaları
-![image](https://github.com/user-attachments/assets/97e7b4d4-5bb5-4a45-87cb-98e0f28e5aca)
-Yanında anahtar işareti bulunan nitelikler PRİMARY KEY’dir. 
-Burada okların ucundaki anahtar simgesine baktığımızda anahtar işaretinin gösterdiği nitelik herhangi bir
-tablonun PRİMARY KEY’ini okun diğer ucu ise o primary keyin diğer tabloda FOREIGN KEY olarak 
-kullanıldığını göstermektedir.  
-Örnek: Tblil tablosunun PRİMARY KEY’i olan ilID, TblOgrenci tablosunda yine ilID ismini alarak 
-FOREIGN KEY olmuştur. 
-
-![image](https://github.com/user-attachments/assets/561d0583-cd6a-4ea7-8bed-93c357abeca7)
-Burada tabloların tüm niteliklerini ve onların özelliklerini görmekteyiz. 
-TblDers tablosunda: DersID niteliği otomatik artan bir özellik ekledim burada 100 den başlayarak 1’er 
-1’er artarak ileriliyor. 
-TblBolum tablosunda: BolumID niteliği otomatik artan bir özellik ekledim burada 300 den başlayarak 1’er 
-1’er artarak ileriliyor. 
-TblOgrenci tablosunda: OgrNo niteliği otomatik artan bir özellik ekledim burada 1000 den başlayarak 
-1’er 1’er artarak ileriliyor. Ve Tel niteliği de default bir değer içeriyor eğer tabloya veri eklenirken Tel 
-niteliği boş bırakılırsa Tel Yok yazdırmasını istiyoruz. Yine aynı şekilde AyarGuncellemeSayisi da default 
-olarak 0 yaptım. 
-TblNot tablosunda: VizeNotu ve FinalNotu nitelikleri de default olarak 0 atadım. 
-TblOgretmen tablosunda: OgretmenID niteliği otomatik artan bir özellik ekledim burada 200 den 
-başlayarak 1’er 1’er artarak ileriliyor. Ve yine aynı şekilde Tel niteliğine de default olarak Tel Yok değerini 
-atıyorum.
-
-
-
-- **TblDers**: Ders bilgileri. `DersID` otomatik artar (100'den başlayarak 1'er 1'er artar).
-- **TblBolum**: Bölüm bilgileri. `BolumID` otomatik artar (300'den başlayarak 1'er 1'er artar).
-- **TblOgrenci**: Öğrenci bilgileri. `OgrNo` otomatik artar (1000'den başlayarak).
-- **TblNot**: Öğrencilerin ders ve not bilgileri.
-- **TblOgretmen**: Öğretmen bilgileri.
-
-**İlişkiler:**
-- `TblOgrenci` → `Tblil` (Foreign Key: `ilID`)
-- `TblNot` → `TblDers` (Foreign Key: `DersID`)
-- `TblDers` → `TblOgretmen` (Foreign Key: `OgretmenID`)
-
----
-
-## Uygulama Özellikleri
-
-### Giriş Sistemi
-Kullanıcılar, öğrenci numarası ve şifreleri ile sisteme giriş yapabilir. Giriş işlemi sırasında:
-- Kullanıcının veritabanında var olup olmadığı kontrol edilir.
-- Başarılı girişlerde kullanıcı bilgileri bir sonraki sayfaya aktarılır.
-
-**SQL Örneği:**
-```csharp
-cmd.CommandText = "SELECT * FROM TblOgrenci WHERE OgrNo='" + _ogrencino + "' AND Sifre LIKE'" + _sifre + "'";
-
-```
-
-Haklısın, şimdi sadece **DOCX dosyasındaki başlıkları** README formatında eksiksiz şekilde yapılandırıyorum.
-
----
-
-# Üniversite Öğrenci Paneli Projesi
-
 ---
 **Proje Hakkında**  
 Bu proje, Kastamonu Üniversitesi Bilgisayar Mühendisliği bölümü Veri Tabanı Yönetim Sistemleri dersi kapsamında geliştirilmiştir. Proje, üniversite öğrencilerinin ders seçimi, not görüntüleme, ayar yapma gibi ihtiyaçlarını karşılayan bir panel uygulamasıdır.
@@ -146,8 +56,37 @@ Bu projede kullanılan teknolojiler ve araçlar:
 ---
 
 ## ER Diyagram
+Projede kullanılan tablolar ve ilişkiler, aşağıdaki ER diyagramında gösterilmiştir.
+
+![image](https://github.com/user-attachments/assets/a730c6b1-2c3c-4f35-a351-9d4780cf1c5c)  
+
+---
 
 ## Tablolar Arasındaki İlişkiler
+![image](https://github.com/user-attachments/assets/97e7b4d4-5bb5-4a45-87cb-98e0f28e5aca)
+Yanında anahtar işareti bulunan nitelikler PRİMARY KEY’dir. 
+Burada okların ucundaki anahtar simgesine baktığımızda anahtar işaretinin gösterdiği nitelik herhangi bir
+tablonun PRİMARY KEY’ini okun diğer ucu ise o primary keyin diğer tabloda FOREIGN KEY olarak 
+kullanıldığını göstermektedir.  
+Örnek: Tblil tablosunun PRİMARY KEY’i olan ilID, TblOgrenci tablosunda yine ilID ismini alarak 
+FOREIGN KEY olmuştur. 
+
+![image](https://github.com/user-attachments/assets/561d0583-cd6a-4ea7-8bed-93c357abeca7)
+Burada tabloların tüm niteliklerini ve onların özelliklerini görmekteyiz. 
+TblDers tablosunda: DersID niteliği otomatik artan bir özellik ekledim burada 100 den başlayarak 1’er 
+1’er artarak ileriliyor. 
+TblBolum tablosunda: BolumID niteliği otomatik artan bir özellik ekledim burada 300 den başlayarak 1’er 
+1’er artarak ileriliyor. 
+TblOgrenci tablosunda: OgrNo niteliği otomatik artan bir özellik ekledim burada 1000 den başlayarak 
+1’er 1’er artarak ileriliyor. Ve Tel niteliği de default bir değer içeriyor eğer tabloya veri eklenirken Tel 
+niteliği boş bırakılırsa Tel Yok yazdırmasını istiyoruz. Yine aynı şekilde AyarGuncellemeSayisi da default 
+olarak 0 yaptım. 
+TblNot tablosunda: VizeNotu ve FinalNotu nitelikleri de default olarak 0 atadım. 
+TblOgretmen tablosunda: OgretmenID niteliği otomatik artan bir özellik ekledim burada 200 den 
+başlayarak 1’er 1’er artarak ileriliyor. Ve yine aynı şekilde Tel niteliğine de default olarak Tel Yok değerini 
+atıyorum.
+
+---
 
 ## Öğrenci Girişi Formu
 
@@ -195,5 +134,35 @@ Bu projede kullanılan teknolojiler ve araçlar:
 
 ---
 
-Bunlar **DOCX dosyasındaki tüm başlıklar** ve alt başlıkları içeriyor. Şimdi eksiksiz bir README dosyası için metinleri bu başlıkların altına ekleyebilirsin. 😊
+- **TblDers**: Ders bilgileri. `DersID` otomatik artar (100'den başlayarak 1'er 1'er artar).
+- **TblBolum**: Bölüm bilgileri. `BolumID` otomatik artar (300'den başlayarak 1'er 1'er artar).
+- **TblOgrenci**: Öğrenci bilgileri. `OgrNo` otomatik artar (1000'den başlayarak).
+- **TblNot**: Öğrencilerin ders ve not bilgileri.
+- **TblOgretmen**: Öğretmen bilgileri.
+
+**İlişkiler:**
+- `TblOgrenci` → `Tblil` (Foreign Key: `ilID`)
+- `TblNot` → `TblDers` (Foreign Key: `DersID`)
+- `TblDers` → `TblOgretmen` (Foreign Key: `OgretmenID`)
+
+---
+
+## Uygulama Özellikleri
+
+### Giriş Sistemi
+Kullanıcılar, öğrenci numarası ve şifreleri ile sisteme giriş yapabilir. Giriş işlemi sırasında:
+- Kullanıcının veritabanında var olup olmadığı kontrol edilir.
+- Başarılı girişlerde kullanıcı bilgileri bir sonraki sayfaya aktarılır.
+
+**SQL Örneği:**
+```csharp
+cmd.CommandText = "SELECT * FROM TblOgrenci WHERE OgrNo='" + _ogrencino + "' AND Sifre LIKE'" + _sifre + "'";
+
+```
+
+Haklısın, şimdi sadece **DOCX dosyasındaki başlıkları** README formatında eksiksiz şekilde yapılandırıyorum.
+
+---
+
+
 
