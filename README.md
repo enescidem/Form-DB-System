@@ -1,4 +1,4 @@
-# Üniversite Öğrenci Paneli Projesi
+# Üniversite Öğrenci Paneli DB Projesi
 
 ---
 **Proje Hakkında**  
