@@ -1,5 +1,11 @@
 # Üniversite Öğrenci Paneli DB Projesi
 
+### Medium Links:
+
+English: https://medium.com/@enescidem/university-student-panel-db-project-1aa18e218475
+
+Türkçe: https://medium.com/@enescidem/%C3%BCniversite-%C3%B6%C4%9Frenci-paneli-db-projesi-ebb7ca4a808f
+
 ---
 
 **Proje Hakkında**  
