@@ -1,6 +1,7 @@
 # Üniversite Öğrenci Paneli DB Projesi
 
 ---
+
 **Proje Hakkında**  
 Bu proje, Kastamonu Üniversitesi Bilgisayar Mühendisliği bölümü Veri Tabanı Yönetim Sistemleri dersi kapsamında geliştirilmiştir. Proje, üniversite öğrencilerinin ders seçimi, not görüntüleme, ayar yapma gibi ihtiyaçlarını karşılayan bir panel uygulamasıdır.
 
