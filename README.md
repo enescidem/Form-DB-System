@@ -9,7 +9,7 @@ Türkçe: https://medium.com/@enescidem/%C3%BCniversite-%C3%B6%C4%9Frenci-paneli
 ---
 
 **Proje Hakkında**  
-Bu proje, Kastamonu Üniversitesi Bilgisayar Mühendisliği bölümü Veri Tabanı Yönetim Sistemleri dersi kapsamında geliştirilmiştir. Proje, üniversite öğrencilerinin ders seçimi, not görüntüleme, ayar yapma gibi ihtiyaçlarını karşılayan bir panel uygulamasıdır.
+Bu proje, üniversite öğrencilerinin ders seçimi, not görüntüleme, ayar yapma gibi ihtiyaçlarını karşılayan bir panel uygulamasıdır.
 
 Microsoft SQL Server'da temel SQL sorguları ile INNER JOIN, LEFT JOIN, Saklı Prosedürler (Stored Procedures) ve Tetikleyiciler (Triggers) gibi ileri teknikleri kullanan bir öğrenci yönetim sistemi.
 
