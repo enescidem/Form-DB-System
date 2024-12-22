@@ -1,4 +1,4 @@
-# Üniversite Öğrenci Paneli DB Projesi
+# Üniversite Öğrenci Paneli DB Projesi (Form)
 
 ### Medium Links:
 
